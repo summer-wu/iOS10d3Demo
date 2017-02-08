@@ -7,7 +7,7 @@ iOS 10.3 add two highlight features that developers may care.
 This demo demostrate the two features.Go Directly to `ViewController.m`
 
 ##change icon
-1. add CFBundleAlternateIcons and CFBundlePrimaryIcon to info.plist. 
+1 . add CFBundleAlternateIcons and CFBundlePrimaryIcon to info.plist. 
 
 Notice: According to my test,adding CFBundlePrimaryIcon is necessary or icon may mismatch. 
 ```
@@ -34,11 +34,11 @@ Notice: According to my test,adding CFBundlePrimaryIcon is necessary or icon may
 	</dict>
 </dict>
 ```
+2 . add AppIcon2@2x.png AppIcon2@3x.png to project(not Assets.xcassets)
 
-2. add AppIcon2@2x.png AppIcon2@3x.png to project(not Assets.xcassets)
 According to my test,adding to Assets.xcassets leading to no effect.
 
-3. add code
+3 . add code
 ```
 if ([app supportsAlternateIcons]) {
         [app setAlternateIconName:@"AppIcon2" completionHandler:^(NSError * _Nullable error) {
